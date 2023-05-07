@@ -56,7 +56,7 @@ function removeFromCart(productId) {
 // Clear cart
 function clearCart() {
   cart.splice(0, cart.length);
-  sessionStorage.remove('cartProducts');
+  sessionStorage.removeItem('cartProducts');
   renderCart();
 }
 

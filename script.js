@@ -10,7 +10,7 @@ const products = [
 ];
 
 // Cart data
-const cart = [];
+const cart = JSON.parse(sessionStorage.getItem('cartProducts')) || [];
 
 // DOM elements
 const productList = document.getElementById("product-list");

@@ -29,7 +29,7 @@ function renderProducts() {
 function renderCart() {
   cartList.innerHTML = "";
   const cartProducts = JSON.parse(sessionStorage.getItem('cartProducts')) || cart;
-  cartProducts.sort((a, b) => a.id - b.id);
+  // cartProducts.sort((a, b) => a.id - b.id);
   cartProducts.forEach((product) => {
     const li = document.createElement("li");
     li.innerHTML = `${product.name} - $${product.price} <button class="remove-from-cart-btn" data-id="${product.id}" onclick="removeFromCart(${product.id})">Remove from Cart</button>`;
